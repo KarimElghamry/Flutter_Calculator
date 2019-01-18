@@ -33,7 +33,10 @@ class _HomeScreenState extends State<HomeScreen>{
                   decoration: BoxDecoration(
                     color: Colors.red[300],
                   ),
-                  child: AutoSizeText(equationText,maxLines: 1,style:TextStyle(fontSize: 70.0,fontWeight: FontWeight.w500,color: Colors.white,)),
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 20.0,left:20.0),
+                    child: AutoSizeText(equationText,maxLines: 1,style:TextStyle(fontSize: 70.0,fontWeight: FontWeight.w500,color: Colors.white,)),
+                  ),
                   ),
 
                 Container(
