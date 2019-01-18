@@ -1,6 +1,6 @@
 # calculator
 
-A flutter calculator made with Flutter Framework
+A calculator made with Flutter Framework
 
 ## Screenshots
 
