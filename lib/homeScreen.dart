@@ -41,15 +41,22 @@ class _HomeScreenState extends State<HomeScreen>{
                   height: (screenHeight/3)-10.0,
                   padding: EdgeInsets.only(right: 10.0),
                   alignment: Alignment(1.0, 1.0),
-                  child: FloatingActionButton(
-                        elevation: 0.0,
-                        backgroundColor: Colors.white,
-                        child: Icon(Icons.delete,color: Colors.red[300]),
-                        onPressed: () => setState(
+                  child: GestureDetector(
+                    onLongPress: () => setState(
                             (){
                               equationText = "";
-                            }
+                              }
                           ),
+                    child: FloatingActionButton(
+                        elevation: 0.0,
+                        backgroundColor: Colors.white,
+                        child: Icon(Icons.delete,color: Colors.red[300]), 
+                        onPressed: () => setState(
+                            (){
+                              equationText = equationText.substring(0,equationText.length-1);
+                              }
+                          ), 
+                  ),
                   ),
                 ),
               ],
